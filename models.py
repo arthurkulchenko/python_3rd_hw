@@ -1,13 +1,12 @@
 class Response:
-	def __init__(self, status, headers, body, environment='development'):
-		# super(Response, self).__init__()
-		self.status = status
-		self.headers = headers
-		self.body = body
-		self.environment = environment
+    def __init__(self, status, headers, body, environment='development'):
+        # super(Response, self).__init__()
+        self.status = status
+        self.headers = headers
+        self.body = body
+        self.environment = environment
 
 
 class DevelopmentErrors:
-	def __init__(self, list=[]):
-		self.list = list
-		
+    def __init__(self, list=[]):
+        self.list = list

@@ -1,13 +1,12 @@
-from models import *
 from response import generate_response
-
-errors = DevelopmentErrors()
+from errors import errors
 
 def application(environ, start_response):
     response = generate_response(environ)
     start_response(response.status, response.headers)
-    if len(errors.list) == 0:
-        body = response.body
-    else:
-        body = errors.list
-    return ["\n".join(body)]
+    # -------------------------------------------------
+    if len(errors.list) is not 0:
+        response.body = ["%s" % errors.list]
+    # -------------------------------------------------
+    return response.body
+    # return ["\n".join(response.body)]
