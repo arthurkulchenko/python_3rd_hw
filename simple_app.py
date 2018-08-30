@@ -1,8 +1,13 @@
+from models import *
+from response import generate_response
+
+errors = DevelopmentErrors()
+
 def application(environ, start_response):
-    lines = ["%s: %r" % (key, value) for key, value in environ.items()]
-    if environ['PATH_INFO'] == '/':
-    	result = "1"
+    response = generate_response(environ)
+    start_response(response.status, response.headers)
+    if len(errors.list) == 0:
+        body = response.body
     else:
-    	result = "2"
-    start_response("200 OK", [("Content-Type", "text/plain")])
-    return ["\n".join([result])]
+        body = errors.list
+    return ["\n".join(body)]
