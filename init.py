@@ -9,4 +9,5 @@ def application(environ, start_response):
         response.body = ["%s" % errors.list]
     # -------------------------------------------------
     return response.body
-    # return ["\n".join(response.body)]
+    # return ["\n".join(environ)]
+    # return ["/b %s" % environ['wsgi.file_wrapper']]

@@ -1,5 +1,5 @@
 headers = [
-    ("Content-Type", "text/plain"),
+    ("Content-Type", "text/html"),
     ("Accept", "*/*"),
     ("Cache-Control", "no-cache"),
     ("Accept-Encoding", "gzip, deflate"),

@@ -7,6 +7,6 @@ class Response:
         self.environment = environment
 
 
-class DevelopmentErrors:
+class DevelopmentDebag:
     def __init__(self, list=[]):
         self.list = list

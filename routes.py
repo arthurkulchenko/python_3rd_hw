@@ -18,15 +18,12 @@ def path_matcher(path):
 
 
 def route_does_exist(route, routes=routes):
-    return [ True for r in routes if (route == r[0] and template_does_exist(route))]
+    return [True for r in routes if (route == r[0] and template_does_exist(route))]
 
 
 def template_does_exist(path):
-    requested = get_current_dir_path() + '/templates' + path_matcher(path)
-    # requested = get_current_dir_path() + '/templates'
-    exclusion_regex = "['.'][\D]+"
-    requested_2 = re.split(exclusion_regex, requested)[0]
-    file_path = requested_2 + '.html'
+    requested = templates_folder() + path_matcher(path)
+    file_path = re.split("['.'][\D]+", requested)[0] + '.html'
     if os.access(file_path, os.F_OK) is True:
         return True
     else:

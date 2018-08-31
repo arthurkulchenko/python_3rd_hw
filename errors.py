@@ -1,3 +1,3 @@
-from models import DevelopmentErrors
+from models import DevelopmentDebag
 
-errors = DevelopmentErrors()
+errors = DevelopmentDebag()
