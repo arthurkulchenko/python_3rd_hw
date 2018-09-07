@@ -30,3 +30,8 @@ def template_does_exist(path):
         errors.list.append("Template not found")
         return False
         # exception "Template not found"
+
+
+def needs_redirection(path):
+    path = ''
+    return False
