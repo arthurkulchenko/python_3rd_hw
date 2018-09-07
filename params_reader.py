@@ -3,7 +3,8 @@ import re
 def income_params(query_string):
 	array = re.split('[&]', query_string)
 	nested_array = map(inner_splitting, array)
-	return map(transform_to_dict, nested_array)
+	array_with_dicts = map(transform_to_dict, nested_array)
+	return array_with_dicts
 
 
 def inner_splitting(element):
