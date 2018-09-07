@@ -5,8 +5,3 @@ class Response:
         self.headers = headers
         self.body = body
         self.environment = environment
-
-
-class DevelopmentDebag:
-    def __init__(self, list=[]):
-        self.list = list

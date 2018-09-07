@@ -1,14 +1,7 @@
 import os
 import re
-from support import *
 from errors import errors
-
-routes = [
-    ('/', 'index'),
-    ('/index', 'index'),
-    ('/about', 'about')
-]
-
+from routings import routes
 
 def path_matcher(path):
 	if path == '/':
@@ -22,7 +15,7 @@ def route_does_exist(route, routes=routes):
 
 
 def template_does_exist(path):
-    requested = templates_folder() + path_matcher(path)
+    requested = os.getcwd() + '/templates' + path_matcher(path)
     file_path = re.split("['.'][\D]+", requested)[0] + '.html'
     if os.access(file_path, os.F_OK) is True:
         return True
