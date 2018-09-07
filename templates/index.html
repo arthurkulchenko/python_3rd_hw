@@ -6,16 +6,22 @@
 	<nav>
 		<ul>
 			<li>
+				<a href="index">main</a>
 			</li>
 			<li>
+				<a href="about">about</a>
 			</li>
 		</ul>
 	</nav>
 	<body>
-		<h1>Hello word!</h1>
-		<ul>
-			<li>{{the}}</li>
-			<li>{{go}}</li>
-		</ul>
+		<h1>Hello world!</h1>
+            <p>
+            	this is go:	{{go}}
+            </p>
+		    <ul>
+			    {% for param in params %}
+			        <li>{{param}}</li>
+			    {% endfor %}
+		    </ul>
 	</body>
 </html>
