@@ -1,3 +1,7 @@
+'''
+    Processing incoming parametrs here
+'''
+
 import re
 
 def income_params(query_string):

@@ -1,9 +1,12 @@
+'''
+    This where the response is creating, also business logic.
+'''
+
 from headers import headers
 from http_statuses import set_status
 from support_routes import *
 from response_model import Response
 from params_reader import income_params
-from errors import errors
 
 
 def generate_response(environ):
