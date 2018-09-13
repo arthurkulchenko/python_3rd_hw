@@ -1,4 +1,5 @@
-from response import generate_response
+import os, sys
+from lib.response import generate_response
 
 def application(environ, start_response):
     response = generate_response(environ)
