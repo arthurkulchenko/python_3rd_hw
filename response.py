@@ -7,12 +7,9 @@ from params_reader import income_params
 
 def generate_response(environ):
     if route_does_exist(environ['PATH_INFO']): 
-        # result = main_programm_exec(environ)
         resolved_params = income_params(environ['QUERY_STRING'])
         status = set_status("ok")
-
         params = {'params': environ['QUERY_STRING'], 'go': resolved_params}
-
         body = get_view_on(environ['PATH_INFO'], **params)
     else:
         status = set_status("not found")
