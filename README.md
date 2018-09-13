@@ -8,13 +8,11 @@
 
 Which you can run by lauching uwsgi server or another app server 
 
-This just servs files from lib/template folder and show parametrs you provide via address bar. Further
-you can do what ever you want with it.
+It just servs files from lib/template folder and show parametrs you provide via address bar.
 
 ##Requirements
 
  - uwsgi
- - 
 
 ##How to
 
